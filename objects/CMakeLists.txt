@@ -1,0 +1,2 @@
+add_subdirectory(hitables)
+add_subdirectory(materials)
