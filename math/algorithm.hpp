@@ -6,7 +6,7 @@ namespace math
 {
 
 template<typename T>
-inline const T& clamp(const T& v, const T& lo, const T& hi) const
+inline const T& clamp(const T& v, const T& lo, const T& hi)
 {
     return lo > v ? lo : hi < v ? hi : v;
 }

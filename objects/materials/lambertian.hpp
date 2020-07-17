@@ -10,7 +10,7 @@ namespace materials
 class lambertian : public base::material_interface
 {
 public:
-    explict lambertian(const math::vec3& a);
+    explicit lambertian(const math::vec3& a);
     bool scatter(const math::ray& r_in, const primitives::hit_record& rec, math::vec3& attenuation, math::ray& scattered) const override;
 
 private:
