@@ -1,5 +1,5 @@
-#ifndef _MATH_VEC3_T_GEOMETRIC_HPP_
-#define _MATH_VEC3_T_GEOMETRIC_HPP_
+#ifndef MATH_VEC3_T_GEOMETRIC_HPP_
+#define MATH_VEC3_T_GEOMETRIC_HPP_
 #include <iostream>
 #include "./vec3-t.hpp"
 
@@ -25,13 +25,13 @@ template<typename T>
 inline vec3_t<T> operator/(const vec3_t<T>& v1, const vec3_t<T>& v2);
 
 template<typename T>
-inline vec3_t<T> operator*(T t, const vec3_t<T>& v);
+inline vec3_t<T> operator*(const T& t, const vec3_t<T>& v);
 
 template<typename T>
-inline vec3_t<T> operator/(const vec3_t<T>& v, T t);
+inline vec3_t<T> operator/(const vec3_t<T>& v, const T& t);
 
 template<typename T>
-inline vec3_t<T> operator*(const vec3_t<T>& v, T t);
+inline vec3_t<T> operator*(const vec3_t<T>& v, const T& t);
 
 template<typename T>
 inline T dot(const vec3_t<T>& v1, const vec3_t<T>& v2);
@@ -46,9 +46,9 @@ template<typename T>
 inline vec3_t<T> reflect(const vec3_t<T>& v, const vec3_t<T>& n);
 
 template<typename T>
-inline bool refract(const vec3_t<T>& v, const vec3_t<T>& n, T ni_over_nt, vec3_t<T>& refracted);
+inline bool refract(const vec3_t<T>& v, const vec3_t<T>& n, const T& ni_over_nt, vec3_t<T>& refracted);
 
-}//end math
+}  // namespace math
 
 #include "./vec3-t-geometric.inl"
-#endif//end _MATH_VEC3_T_GEOMETRIC_HPP_
+#endif  // MATH_VEC3_T_GEOMETRIC_HPP_

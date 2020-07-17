@@ -1,5 +1,5 @@
-#ifndef _UTILITY_RANDOM_HPP_
-#define _UTILITY_RANDOM_HPP_
+#ifndef UTILITY_RANDOM_HPP_
+#define UTILITY_RANDOM_HPP_
 #include "math/vec3.hpp"
 
 namespace utility
@@ -7,10 +7,10 @@ namespace utility
 namespace random
 {
 
-	math::vec3 random_in_sphere();
-	math::vec3 random_in_unit_disk();
+    math::vec3 random_in_sphere();
+    math::vec3 random_in_unit_disk();
 
-}//end random
-}//end utility
+}  // namespace random
+}  // namespace utility
 
-#endif//end _UTILITY_RANDOM_H_
+#endif  // UTILITY_RANDOM_HPP_

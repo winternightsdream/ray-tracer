@@ -3,11 +3,11 @@
 
 int main(int argc, char** argv)
 {
-	utility::threading::ThreadPool::initialize(4);
+    utility::threading::ThreadPool::initialize(4);
 
-	render_application::renderer tracer;
-	int ret = tracer.render();
+    render_application::renderer tracer;
+    int ret = tracer.render();
 
-	utility::threading::ThreadPool::finialize();
-	return ret;
+    utility::threading::ThreadPool::finialize();
+    return ret;
 }

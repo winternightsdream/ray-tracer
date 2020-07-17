@@ -1,5 +1,5 @@
-#ifndef _OBJECTS_MATERIALS_DIELECTRIC_H_
-#define _OBJECTS_MATERIALS_DIELECTRIC_H_
+#ifndef OBJECTS_MATERIALS_DIELECTRIC_HPP_
+#define OBJECTS_MATERIALS_DIELECTRIC_HPP_
 #include "objects/base/material-interface.hpp"
 
 namespace objects
@@ -10,14 +10,14 @@ namespace materials
 class dielectric : public base::material_interface
 {
 public:
-	dielectric(math::real ri);
-	virtual bool scatter(const math::ray& r_in, const primitives::hit_record& rec, math::vec3& attenuation, math::ray& scattered) const;
+    explicit dielectric(const math::real& ri);
+    bool scatter(const math::ray& r_in, const primitives::hit_record& rec, math::vec3& attenuation, math::ray& scattered) const override;
 
 private:
-	math::real	m_ref_index;
+    math::real  m_ref_index;
 };
 
-}//end materials
-}//end objects
+}  // namespace materials
+}  // namespace objects
 
-#endif//end _OBJECTS_MATERIALS_DIELECTRIC_H_
+#endif  // OBJECTS_MATERIALS_DIELECTRIC_HPP_

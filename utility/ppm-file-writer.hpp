@@ -1,7 +1,6 @@
-#ifndef _UTILITY_PPM_FILE_WRITER_HPP_
-#define _UTILITY_PPM_FILE_WRITER_HPP_
+#ifndef UTILITY_PPM_FILE_WRITER_HPP_
+#define UTILITY_PPM_FILE_WRITER_HPP_
 #include <fstream>
-#include <mutex>
 #include "math/vec3.hpp"
 
 namespace utility
@@ -10,17 +9,17 @@ namespace utility
 class PpmFileWriter
 {
 public:
-	bool open_file(char const * const file_path, int width, int height);
-	bool write(int x, int y, math::vec3 colour);
-	bool flush();
-	bool is_open();
-	bool close_file();
+    bool open_file(char const * const file_path, int width, int height);
+    bool write(int x, int y, math::vec3 colour);
+    bool flush();
+    bool is_open();
+    bool close_file();
 
 private:
-	std::ofstream	m_file_handle;
-	bool			m_open = false;
+    std::ofstream   m_file_handle;
+    bool            m_open = false;
 };
 
-}//end utility
+}  // namespace utility
 
-#endif//end _UTILITY_PPM_FILE_WRITER_HPP_
+#endif  // UTILITY_PPM_FILE_WRITER_HPP_
