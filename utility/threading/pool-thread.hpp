@@ -34,8 +34,8 @@ private:
 
     Semaphore   m_sync_control;
     std::thread m_thread;
-    Task*       m_task;
     ThreadPool* m_owner;
+    Task*       m_task;
     bool        m_canceled;
 };
 

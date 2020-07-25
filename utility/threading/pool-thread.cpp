@@ -8,7 +8,7 @@ namespace utility
 namespace threading
 {
 
-PoolThread::PoolThread() : m_owner{nullptr}, m_canceled{false}, m_task{nullptr}
+PoolThread::PoolThread() : m_owner{nullptr}, m_task{nullptr}, m_canceled{false}
 { }
 
 PoolThread::~PoolThread()
